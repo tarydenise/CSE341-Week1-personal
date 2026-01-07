@@ -1,12 +1,12 @@
-const helloRoute = (req, res) => {
-  res.send("Hello World");
+const taryRoute = (req, res) => {
+  res.send("Tary Tupouata");
 };
 
-const againRoute = (req, res) => {
-  res.send("Hello World Again");
+const lisiateRoute = (req, res) => {
+  res.send("Lisiate Ata");
 };
 
 module.exports = {
-  helloRoute,
-  againRoute,
+  taryRoute,
+  lisiateRoute,
 };
