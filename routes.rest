@@ -1,0 +1,25 @@
+
+
+///////////////////////// LOCALHOST ///////////////////////////////
+
+// get all contacts
+###
+GET http://localhost:8080/contacts
+
+// get single contact by ID
+
+// Lisiate
+###
+GET http://localhost:8080/contacts/696acbbb22a3cf17053b03a9
+
+// Kristyn
+###
+GET http://localhost:8080/contacts/696acbbb22a3cf17053b03aa
+
+// Mark
+###
+GET http://localhost:8080/contacts/696acbbb22a3cf17053b03ab
+
+// Richie
+###
+GET http://localhost:8080/contacts/696acbbb22a3cf17053b03ac
