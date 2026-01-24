@@ -7,19 +7,60 @@
 GET http://localhost:8080/contacts
 
 // get single contact by ID
-
-// Lisiate
+// Example: Test
 ###
 GET http://localhost:8080/contacts/696acbbb22a3cf17053b03a9
 
+// Create new contact
+###
+POST http://localhost:8080/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Test",
+  "lastName": "Testing",
+  "email": "test@example.com",
+  "favoriteColor": "Test",
+  "birthday": "1990-01-01"
+}
+
+// Update contact
+// Example: Test
+###
+PUT http://localhost:8080/contacts/696acbbb22a3cf17053b03a9
+Content-Type: application/json
+
+{
+  "firstName": "Lisiate",
+  "lastName": "Ata",
+  "email": "lisiate@example.com",
+  "favoriteColor": "Purple",
+  "birthday": "1984-15-02"
+}
+
+// Delete contact
+// Example: Test
+###
+DELETE http://localhost:8080/contacts/69749bc7889e38a32ce307b8
+
+///////////////////////////// RENDER ////////////////////////////////
+###
+GET https://cse341-week1-personal.onrender.com/contacts
+
+// get single contact by ID
+
+// Lisiate
+###
+GET https://cse341-week1-personal.onrender.com/contacts/696acbbb22a3cf17053b03a9
+
 // Kristyn
 ###
-GET http://localhost:8080/contacts/696acbbb22a3cf17053b03aa
+GET https://cse341-week1-personal.onrender.com/contacts/696acbbb22a3cf17053b03aa
 
 // Mark
 ###
-GET http://localhost:8080/contacts/696acbbb22a3cf17053b03ab
+GET https://cse341-week1-personal.onrender.com/contacts/696acbbb22a3cf17053b03ab
 
 // Richie
 ###
-GET http://localhost:8080/contacts/696acbbb22a3cf17053b03ac
+GET https://cse341-week1-personal.onrender.com/contacts/696acbbb22a3cf17053b03ac
