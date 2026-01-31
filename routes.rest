@@ -44,23 +44,44 @@ Content-Type: application/json
 DELETE http://localhost:8080/contacts/69749bc7889e38a32ce307b8
 
 ///////////////////////////// RENDER ////////////////////////////////
+// GET all contacts
 ###
 GET https://cse341-week1-personal.onrender.com/contacts
 
 // get single contact by ID
-
-// Lisiate
+// Example: Lisiate
 ###
 GET https://cse341-week1-personal.onrender.com/contacts/696acbbb22a3cf17053b03a9
 
-// Kristyn
+// Create new contact
 ###
-GET https://cse341-week1-personal.onrender.com/contacts/696acbbb22a3cf17053b03aa
+POST  https://cse341-week1-personal.onrender.com/contacts
+Content-Type: application/json
 
-// Mark
-###
-GET https://cse341-week1-personal.onrender.com/contacts/696acbbb22a3cf17053b03ab
+{
+  "firstName": "Test",
+  "lastName": "Testing",
+  "email": "test@example.com",
+  "favoriteColor": "Test",
+  "birthday": "1901-01-01"
+}
 
-// Richie
+// Update contact
+// Example: Test
 ###
-GET https://cse341-week1-personal.onrender.com/contacts/696acbbb22a3cf17053b03ac
+PUT https://cse341-week1-personal.onrender.com/contacts/6974a4870de4fa502e553555
+Content-Type: application/json
+
+{
+  "firstName": "Test Completed",
+  "lastName": "Successful",
+  "email": "test@example.com",
+  "favoriteColor": "Test",
+  "birthday": "1900-01-01"
+}
+
+// Delete contact
+// Example: Test
+###
+DELETE https://cse341-week1-personal.onrender.com/contacts/6974a4870de4fa502e553555
+
