@@ -13,6 +13,8 @@ app
         res.setHeader("Access-Control-Allow-Origin", "*");
         next();
     })
+    .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
+    .use('/contacts', require('./routes/contactsRoute'))
     .use("/", require("./routes"));
 
 mongodb.initDb((err, mongodb) => {
