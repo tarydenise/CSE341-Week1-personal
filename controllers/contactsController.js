@@ -6,6 +6,12 @@ const getAll = async (req, res) => {
     const result = await mongodb.getDb().db().collection('contacts').find();
     const lists = await result.toArray();
 
+    // Add virtual 'id' field for react frontend compatibility
+    const transformed = lists.map(contact => ({
+      ...contact,
+      id: contact._id
+    }));
+
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
   } catch (error) {
