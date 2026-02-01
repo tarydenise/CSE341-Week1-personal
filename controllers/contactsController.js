@@ -36,6 +36,7 @@ const createContact = async (req, res, next) => {
 
 const updateContact = async (req, res, next) => {
   const userId = new ObjectId(req.params.id);
+
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -43,9 +44,13 @@ const updateContact = async (req, res, next) => {
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday
   };
+
   const response = await mongodb.getDb().db().collection('contacts').replaceOne({ _id: userId }, contact);
-  if (response.acknowledged) {
-    res.status(200).json(response);
+  
+  if (response.modifiedCount > 0) {
+    res.status(204).json({ message: 'Contact updated successfully' });
+  } else if (response.matchedCount === 0) {
+    res.status(404).json({ message: 'Contact not found' });
   } else {
     res.status(500).json(response.error || 'Some error occurred while updating the contact.');
   }
